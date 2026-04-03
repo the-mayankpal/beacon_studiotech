@@ -19,12 +19,40 @@ const ModernServiceCard = ({
   visual: ReactNode
 }) => {
   return (
-    <div className="w-full max-w-[1200px] mx-auto mb-20 sm:mb-32 last:mb-0">
+    <motion.div 
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={{
+        hidden: { opacity: 0, y: 40 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 0.8,
+            ease: [0.16, 1, 0.3, 1],
+            staggerChildren: 0.1
+          }
+        }
+      }}
+      className="w-full max-w-[1200px] mx-auto mb-20 sm:mb-32 last:mb-0"
+    >
       {/* Main Card */}
-      <div className="bg-[#f9f9f9] rounded-sm flex flex-col-reverse lg:flex-row border border-gray-200/50 mb-1">
+      <motion.div 
+        variants={{
+          hidden: { opacity: 0, scale: 0.98 },
+          visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } }
+        }}
+        className="bg-[#f9f9f9] rounded-sm flex flex-col-reverse lg:flex-row border border-gray-200/50 mb-1 overflow-hidden"
+      >
         {/* Left Content */}
         <div className="w-full lg:w-[45%] p-6 sm:px-12 lg:px-14 lg:py-[60px] flex flex-col justify-center bg-white border-r border-gray-100">
-          <div>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, x: -20 },
+              visible: { opacity: 1, x: 0, transition: { duration: 0.6, delay: 0.2 } }
+            }}
+          >
             <h3 className="text-xl sm:text-4xl font-sans font-medium text-black leading-tight mb-1 tracking-tight">
               {title}
             </h3>
@@ -34,7 +62,7 @@ const ModernServiceCard = ({
             <p className="text-xs sm:text-base text-gray-600 leading-relaxed max-w-sm font-sans">
               {description}
             </p>
-          </div>
+          </motion.div>
         </div>
 
         {/* Right Visual */}
@@ -48,26 +76,43 @@ const ModernServiceCard = ({
             }}
           ></div>
           
-          <div className="relative z-10 w-full h-full flex items-center justify-center">
+          <motion.div 
+            variants={{
+              hidden: { opacity: 0, scale: 0.9 },
+              visible: { opacity: 1, scale: 1, transition: { duration: 0.8, delay: 0.4 } }
+            }}
+            className="relative z-10 w-full h-full flex items-center justify-center"
+          >
             {visual}
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Stats Below */}
       <div className="grid grid-cols-3 gap-1">
         {stats.map((stat, i) => (
-          <div key={i} className="bg-[#f9f9f9] p-3 sm:p-10 lg:py-8 lg:px-10 rounded-sm flex flex-col justify-center min-h-[100px] sm:min-h-[160px] lg:min-h-0">
+          <motion.div 
+            key={i}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { 
+                opacity: 1, 
+                y: 0,
+                transition: { duration: 0.6, delay: 0.5 + (i * 0.1) }
+              }
+            }}
+            className="bg-[#f9f9f9] p-3 sm:p-10 lg:py-8 lg:px-10 rounded-sm flex flex-col justify-center min-h-[100px] sm:min-h-[160px] lg:min-h-0"
+          >
             <span className="text-xl sm:text-5xl lg:text-5xl font-sans font-medium text-black mb-1 sm:mb-4 lg:mb-2 tracking-tighter">
               {stat.value}
             </span>
             <p className="text-[10px] sm:text-sm text-gray-500 font-sans leading-snug max-w-[240px]">
               {stat.label}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
