@@ -36,7 +36,7 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        className="bg-black py-16 relative z-50 mt-[-100vh] md:mt-[-100vh]"
+        className="bg-black py-16 relative z-50 md:mt-[-100vh]"
       >
         <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 pt-[10vh] md:pt-[20vh]">
           <div className="text-center mb-16">

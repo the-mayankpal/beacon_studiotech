@@ -50,7 +50,7 @@ const HowItWorksSection = () => {
           </div>
 
           {/* Right Column: Scroll Container */}
-          <div className="w-full relative flex flex-col gap-12 md:gap-0 md:pt-[10vh] md:pb-[30vh]">
+          <div className="w-full relative flex flex-col gap-16 md:gap-12 md:h-[400vh] md:pt-[10vh]">
             {phases.map((item, index) => {
               // Properly offset them with a 65px increment so the next card doesn't cover the 'PHASE X' text!
               const topVal = 80 + index * 65;
@@ -65,10 +65,7 @@ const HowItWorksSection = () => {
                     "md:sticky w-full min-h-[60vh] rounded-2xl p-8 sm:p-10 shadow-2xl border flex flex-col",
                     isBlack 
                       ? "bg-[#0a0a0a] border-white/10 text-white" 
-                      : "bg-[#F5F0E8] border-stone-200 text-black",
-                    // Uniform massive spacing ensures each card gets exactly the same 50vh sticking duration
-                    // before the container scrolls off, preventing the last card from instantly failing to stack.
-                    "md:mb-[50vh]"
+                      : "bg-[#F5F0E8] border-stone-200 text-black"
                   )}
                 >
                   {/* Top Bar with Number and Arrow Button */}
