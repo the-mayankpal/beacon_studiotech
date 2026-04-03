@@ -61,7 +61,7 @@ const HowItWorksSection = () => {
                   key={item.id}
                   style={{ top: `${topVal}px`, zIndex }}
                   className={cn(
-                    "sticky w-full min-h-[50vh] lg:min-h-[60vh] rounded-2xl p-8 sm:p-10 shadow-2xl border flex flex-col transform-gpu will-change-transform",
+                    "sticky w-full min-h-[50vh] lg:min-h-[60vh] rounded-2xl p-8 sm:p-10 shadow-2xl border flex flex-col transform-gpu will-change-transform backface-hidden",
                     isBlack 
                       ? "bg-[#0a0a0a] border-white/10 text-white" 
                       : "bg-[#F5F0E8] border-stone-200 text-black"
