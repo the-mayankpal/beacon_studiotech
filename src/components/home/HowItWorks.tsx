@@ -49,7 +49,7 @@ const HowItWorksSection = () => {
           </div>
 
           {/* Right Column: Scroll Container */}
-          <div className="w-full relative flex flex-col gap-12 lg:gap-12 h-[350vh] lg:h-[400vh] lg:pt-[10vh]">
+          <div className="w-full relative flex flex-col gap-12 lg:gap-12 lg:pt-[10vh]">
             {phases.map((item, index) => {
               // Standardized 55px increment maps beautifully regardless of mobile or desktop screen height
               const topVal = 80 + index * 55;
