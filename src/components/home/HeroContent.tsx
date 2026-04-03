@@ -51,16 +51,31 @@ const HeroContent = () => (
       {/* Hero Section */}
       <main className="flex-grow flex flex-col justify-center items-center text-center pt-0 pb-32 md:pt-0 md:pb-44">
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.15,
+                delayChildren: 0.2
+              }
+            }
+          }}
           className="max-w-3xl flex flex-col items-center"
         >
           {/* Badge */}
           <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
+            variants={{
+              hidden: { opacity: 0, scale: 0.8, y: 20 },
+              visible: { 
+                opacity: 1, 
+                scale: 1, 
+                y: 0,
+                transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+              }
+            }}
             className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-3 py-1.5 mb-6 md:mb-8"
           >
             <div className="bg-white text-black rounded-full p-1">
@@ -71,9 +86,14 @@ const HeroContent = () => (
 
           {/* Headline */}
           <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              visible: { 
+                opacity: 1, 
+                y: 0,
+                transition: { duration: 1, ease: [0.16, 1, 0.3, 1] }
+              }
+            }}
             className="font-serif text-[34px] leading-[1.1] sm:text-[54px] md:text-[65px] lg:text-[72px] font-medium sm:leading-[1.1] mb-4 md:mb-6 tracking-tight max-w-[640px] sm:max-w-3xl mx-auto text-black px-2"
           >
             We Build What Your Business Actually Needs.
@@ -81,19 +101,29 @@ const HeroContent = () => (
 
           {/* Subheadline */}
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { 
+                opacity: 1, 
+                y: 0,
+                transition: { duration: 1, ease: [0.16, 1, 0.3, 1] }
+              }
+            }}
             className="text-xl sm:text-2xl text-black max-w-xl mb-10 md:mb-14 leading-relaxed font-sans font-medium"
           >
             A website that works for you and AI agents that never stop. We do both.
           </motion.p>
 
-          {/* CTA Buttons - Force one row, two column format even on mobile */}
+          {/* CTA Buttons */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { 
+                opacity: 1, 
+                y: 0,
+                transition: { duration: 1, ease: [0.16, 1, 0.3, 1] }
+              }
+            }}
             className="flex flex-row items-center justify-center gap-3 sm:gap-6 w-full max-w-[95vw] sm:max-w-none"
           >
             <a href="https://t.me/mayank01me" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-[56px] min-w-[150px] sm:min-w-[180px] gap-2 bg-white text-black px-6 sm:px-8 py-3.5 rounded-full font-semibold hover:bg-black hover:text-white transition-all shadow-lg hover:shadow-white/10 whitespace-nowrap text-sm sm:text-base border border-white">
@@ -109,7 +139,12 @@ const HeroContent = () => (
       </main>
 
       {/* Trusted Brands */}
-      <div className="pb-4 md:pb-8 flex flex-col items-center justify-center w-full">
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2, duration: 1 }}
+        className="pb-4 md:pb-8 flex flex-col items-center justify-center w-full"
+      >
         <p className="text-sm font-medium text-gray-400 mb-6 md:mb-8">Powered by Leading AI Technologies</p>
         <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16 opacity-70 text-white">
           {/* Cursor */}
@@ -138,7 +173,7 @@ const HeroContent = () => (
             <span className="font-bold text-xl tracking-tight">OpenAI</span>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   </div>
 );
