@@ -30,14 +30,13 @@ const phases = [
 
 const HowItWorksSection = () => {
   return (
-    <section id="how-it-works" className="bg-black relative w-full pt-20 pb-[10vh] md:pb-[100vh]">
+    <section id="how-it-works" className="bg-black relative w-full pt-20 pb-[100vh]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Mobile: single col, Desktop: two cols */}
-        <div className="flex flex-col md:grid md:grid-cols-[45%_55%] md:gap-8 relative">
+                {/* Mobile: single col, Desktop: two cols */}
+          <div className="flex flex-col lg:grid lg:grid-cols-[45%_55%] gap-16 lg:gap-8 relative">
           
           {/* Left Column: Sticky */}
-          <div className="md:sticky md:top-0 md:h-screen flex flex-col justify-center py-16 md:py-0">
+          <div className="lg:sticky lg:top-0 lg:h-screen flex flex-col justify-center py-16 lg:py-0">
             <span className="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-6 font-semibold block">
               OUR PROCESS
             </span>
@@ -50,10 +49,10 @@ const HowItWorksSection = () => {
           </div>
 
           {/* Right Column: Scroll Container */}
-          <div className="w-full relative flex flex-col gap-16 md:gap-12 md:h-[400vh] md:pt-[10vh]">
+          <div className="w-full relative flex flex-col gap-12 lg:gap-12 h-[350vh] lg:h-[400vh] lg:pt-[10vh]">
             {phases.map((item, index) => {
-              // Properly offset them with a 65px increment so the next card doesn't cover the 'PHASE X' text!
-              const topVal = 80 + index * 65;
+              // Standardized 55px increment maps beautifully regardless of mobile or desktop screen height
+              const topVal = 80 + index * 55;
               const zIndex = index + 1;
               const isBlack = index % 2 !== 0; // Card 1 is White, Card 2 is Black, etc.
 
@@ -62,7 +61,7 @@ const HowItWorksSection = () => {
                   key={item.id}
                   style={{ top: `${topVal}px`, zIndex }}
                   className={cn(
-                    "md:sticky w-full min-h-[60vh] rounded-2xl p-8 sm:p-10 shadow-2xl border flex flex-col",
+                    "sticky w-full min-h-[50vh] lg:min-h-[60vh] rounded-2xl p-8 sm:p-10 shadow-2xl border flex flex-col",
                     isBlack 
                       ? "bg-[#0a0a0a] border-white/10 text-white" 
                       : "bg-[#F5F0E8] border-stone-200 text-black"
