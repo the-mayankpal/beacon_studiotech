@@ -90,18 +90,28 @@ export default function Home() {
               Most of our clients were too until they just sent that first message. Takes 30 seconds. That's it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <button className="bg-white text-black px-8 py-3.5 rounded-full font-sans font-medium hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
+              <a 
+                href="https://cal.com/mayank-8lz88l/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-black px-8 py-3.5 rounded-full font-sans font-medium hover:bg-gray-200 transition-colors flex items-center justify-center gap-2"
+              >
                 Book a call
-              </button>
+              </a>
               <div className="relative p-[2px] rounded-full overflow-hidden">
                 <div 
                   className="absolute inset-[-1000%] bg-[conic-gradient(from_0deg,transparent_0_240deg,white_360deg)] animate-spin font-sans"
                   style={{ animationDuration: '4s' }}
                 ></div>
-                <button className="relative bg-black/90 backdrop-blur-sm text-white px-8 py-3.5 rounded-full font-sans font-medium hover:bg-black transition-colors flex items-center justify-center gap-2 w-full h-full">
+                <a 
+                  href="https://t.me/mayank01me"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative bg-black/90 backdrop-blur-sm text-white px-8 py-3.5 rounded-full font-sans font-medium hover:bg-black transition-colors flex items-center justify-center gap-2 w-full h-full"
+                >
                   <img src={telegramIcon} alt="Telegram" className="w-5 h-5" />
                   Telegram Chat
-                </button>
+                </a>
               </div>
             </div>
           </div>
