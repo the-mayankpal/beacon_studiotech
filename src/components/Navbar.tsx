@@ -25,7 +25,7 @@ export default function Navbar({ theme = 'dark' }: { theme?: 'dark' | 'light' })
       <div className={`flex items-center gap-3 text-xl font-bold tracking-wider ${isLight ? 'text-black' : 'text-white'}`}>
         <Link to="/" className="flex items-center gap-3 group">
           <div className="w-10 h-10 rounded-full overflow-hidden border border-white/20 bg-white p-1 flex items-center justify-center transition-transform group-hover:scale-110 duration-500">
-            <img src={logoImg} alt="Beacon Logo" className="w-full h-full object-contain" />
+            <img src={logoImg} alt="Beacon Logo" width="38" height="38" className="w-full h-full object-contain" decoding="async" />
           </div>
           <span>BEACON</span>
         </Link>

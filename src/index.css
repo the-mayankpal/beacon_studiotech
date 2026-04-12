@@ -26,3 +26,28 @@ html.lenis, html.lenis body {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
+@keyframes heroFadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroScaleIn {
+  0% { opacity: 0; transform: translateY(20px) scale(0.8); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.hero-animate-fade {
+  opacity: 0;
+  animation: heroFadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-animate-scale {
+  opacity: 0;
+  animation: heroScaleIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-delay-200 { animation-delay: 200ms; }
+.hero-delay-400 { animation-delay: 400ms; }
+.hero-delay-600 { animation-delay: 600ms; }
+.hero-delay-800 { animation-delay: 800ms; }

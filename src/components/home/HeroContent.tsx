@@ -56,90 +56,35 @@ const HeroContent = () => (
 
       {/* Hero Section */}
       <main className="flex-grow flex flex-col justify-center items-center text-center pt-0 pb-32 md:pt-0 md:pb-44">
-        <motion.div 
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.15,
-                delayChildren: 0.2
-              }
-            }
-          }}
-          className="max-w-3xl flex flex-col items-center"
-        >
+        <div className="max-w-3xl flex flex-col items-center">
           {/* Badge */}
-          <motion.div 
-            variants={{
-              hidden: { opacity: 0, scale: 0.8, y: 20 },
-              visible: { 
-                opacity: 1, 
-                scale: 1, 
-                y: 0,
-                transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
-              }
-            }}
-            className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-3 py-1.5 mb-6 md:mb-8"
-          >
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-3 py-1.5 mb-6 md:mb-8 hero-animate-scale">
             <div className="bg-white text-black rounded-full p-1">
               <Clock size={14} strokeWidth={3} />
             </div>
             <span className="text-xs font-medium text-gray-200 pr-2">200+ hours saved</span>
-          </motion.div>
+          </div>
 
           {/* Headline */}
-          <motion.h1 
-            variants={{
-              hidden: { opacity: 0, y: 30 },
-              visible: { 
-                opacity: 1, 
-                y: 0,
-                transition: { duration: 1, ease: [0.16, 1, 0.3, 1] }
-              }
-            }}
-            className="font-serif text-[34px] leading-[1.1] sm:text-[54px] md:text-[65px] lg:text-[72px] font-medium sm:leading-[1.1] mb-4 md:mb-6 tracking-tight max-w-[640px] sm:max-w-3xl mx-auto text-black px-2"
-          >
+          <h1 className="font-serif text-[34px] leading-[1.1] sm:text-[54px] md:text-[65px] lg:text-[72px] font-medium sm:leading-[1.1] mb-4 md:mb-6 tracking-tight max-w-[640px] sm:max-w-3xl mx-auto text-black px-2 hero-animate-fade hero-delay-200">
             We Build What Your Business Actually Needs.
-          </motion.h1>
+          </h1>
 
           {/* Subheadline */}
-          <motion.p 
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { 
-                opacity: 1, 
-                y: 0,
-                transition: { duration: 1, ease: [0.16, 1, 0.3, 1] }
-              }
-            }}
-            className="text-xl sm:text-2xl text-black max-w-xl mb-10 md:mb-14 leading-relaxed font-sans font-medium"
-          >
+          <p className="text-xl sm:text-2xl text-black max-w-xl mb-10 md:mb-14 leading-relaxed font-sans font-medium hero-animate-fade hero-delay-400">
             A website that works for you and AI agents that never stop. We do both.
-          </motion.p>
+          </p>
 
           {/* CTA Buttons */}
-          <motion.div 
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { 
-                opacity: 1, 
-                y: 0,
-                transition: { duration: 1, ease: [0.16, 1, 0.3, 1] }
-              }
-            }}
-            className="flex flex-row items-center justify-center gap-3 sm:gap-6 w-full max-w-[95vw] sm:max-w-none"
-          >
+          <div className="flex flex-row items-center justify-center gap-3 sm:gap-6 w-full max-w-[95vw] sm:max-w-none hero-animate-fade hero-delay-600">
             <a href="https://t.me/mayank01me" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-[56px] min-w-[150px] sm:min-w-[180px] gap-2 bg-white text-black px-6 sm:px-8 py-3.5 rounded-full font-semibold hover:bg-black hover:text-white transition-all shadow-lg hover:shadow-white/10 whitespace-nowrap text-sm sm:text-base border border-white">
               Let's chat <ChevronRight size={20} />
             </a>
             <div className="flex-shrink-0">
               <FlowButton text="See projects" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })} />
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </main>
 
       {/* Trusted Brands */}
