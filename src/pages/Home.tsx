@@ -61,7 +61,7 @@ export default function Home() {
         <div className="relative w-full max-w-[1400px] overflow-hidden aspect-[4/5] sm:aspect-[21/9] flex items-center justify-center rounded-sm">
           {/* Background Image */}
           <img 
-            src="https://res.cloudinary.com/dkxe8h4cs/image/upload/v1775104032/withhome_a21pzs.png" 
+            src="https://res.cloudinary.com/dkxe8h4cs/image/upload/f_auto,q_auto/v1775104032/withhome_a21pzs.png" 
             alt="Dark Abstract" 
             className="absolute inset-0 w-full h-full object-cover"
             referrerPolicy="no-referrer"

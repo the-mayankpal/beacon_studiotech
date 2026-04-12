@@ -9,7 +9,7 @@ export default function Privacy() {
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://res.cloudinary.com/dkxe8h4cs/image/upload/v1775132707/Whisk_u2yxegzymgz4ejm30yyizmytczm1qtljjznz0im_lcadsy.png" 
+            src="https://res.cloudinary.com/dkxe8h4cs/image/upload/f_auto,q_auto/v1775132707/Whisk_u2yxegzymgz4ejm30yyizmytczm1qtljjznz0im_lcadsy.png" 
             alt="Background" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"

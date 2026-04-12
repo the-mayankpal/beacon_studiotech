@@ -12,7 +12,7 @@ export default function About() {
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://res.cloudinary.com/dkxe8h4cs/image/upload/v1775132707/Whisk_u2yxegzymgz4ejm30yyizmytczm1qtljjznz0im_lcadsy.png" 
+            src="https://res.cloudinary.com/dkxe8h4cs/image/upload/f_auto,q_auto/v1775132707/Whisk_u2yxegzymgz4ejm30yyizmytczm1qtljjznz0im_lcadsy.png" 
             alt="Background" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -87,7 +87,7 @@ export default function About() {
             <div className="scale-75 sm:scale-100 origin-bottom sm:origin-center drop-shadow-xl">
               <PostageStamp width={240} height={160}>
                 <img 
-                  src="https://res.cloudinary.com/dkxe8h4cs/image/upload/v1775132358/Whisk_53654758f192ebd981f4334d0c8b6da6dr_n7e4d2.png" 
+                  src="https://res.cloudinary.com/dkxe8h4cs/image/upload/f_auto,q_auto/v1775132358/Whisk_53654758f192ebd981f4334d0c8b6da6dr_n7e4d2.png" 
                   alt="New York Stamp" 
                   className="w-full h-full object-cover"
                 />

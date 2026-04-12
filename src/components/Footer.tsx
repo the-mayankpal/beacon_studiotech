@@ -40,7 +40,7 @@ export default function Footer() {
       {/* Bottom Section: Image & Copyright */}
       <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[450px]">
         <img 
-          src="https://res.cloudinary.com/dkxe8h4cs/image/upload/v1775129846/Whisk_2273de1fcb1571786784f3780bc0d8e4dr_g0fy2e.png" 
+          src="https://res.cloudinary.com/dkxe8h4cs/image/upload/f_auto,q_auto/v1775129846/Whisk_2273de1fcb1571786784f3780bc0d8e4dr_g0fy2e.png" 
           alt="Footer landscape" 
           className="w-full h-full object-cover"
           referrerPolicy="no-referrer"

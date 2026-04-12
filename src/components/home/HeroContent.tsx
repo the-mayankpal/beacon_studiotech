@@ -15,7 +15,7 @@ const HeroContent = () => (
     <div className="absolute inset-0 z-0">
       {/* Mobile hero image */}
       <img 
-        src="https://res.cloudinary.com/dkxe8h4cs/image/upload/v1775133143/ChatGPT_Image_Apr_2_2026_05_31_45_AM_qilweo.png" 
+        src="https://res.cloudinary.com/dkxe8h4cs/image/upload/f_auto,q_auto/v1775133143/ChatGPT_Image_Apr_2_2026_05_31_45_AM_qilweo.png" 
         alt="Hero background" 
         className="w-full h-full object-cover block md:hidden"
         referrerPolicy="no-referrer"
@@ -25,7 +25,7 @@ const HeroContent = () => (
       />
       {/* Desktop hero image */}
       <img 
-        src="https://res.cloudinary.com/dkxe8h4cs/image/upload/v1775132707/Whisk_u2yxegzymgz4ejm30yyizmytczm1qtljjznz0im_lcadsy.png" 
+        src="https://res.cloudinary.com/dkxe8h4cs/image/upload/f_auto,q_auto/v1775132707/Whisk_u2yxegzymgz4ejm30yyizmytczm1qtljjznz0im_lcadsy.png" 
         alt="Hero background" 
         className="w-full h-full object-cover hidden md:block"
         referrerPolicy="no-referrer"
