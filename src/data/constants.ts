@@ -9,14 +9,14 @@ import denisImg from '../assets/images/testimonial-denis.png';
 
 
 export const projects = [
-  { title: "Aura AI", category: "Brand Identity", video: "https://res.cloudinary.com/dkxe8h4cs/video/upload/v1774290374/document_6201569219327302910_fqv2o4.mp4" },
-  { title: "Nexora Dashboard", category: "UI/UX Design", image: "https://res.cloudinary.com/dkxe8h4cs/image/upload/v1774290114/photo_6201569219787296196_y_goxilz.jpg" },
-  { title: "Quantum Flow", category: "Motion Graphics", video: "https://res.cloudinary.com/dkxe8h4cs/video/upload/v1774290370/document_6201569219327302909_ytxguq.mp4" },
-  { title: "Vortex App", category: "Mobile Development", image: "https://res.cloudinary.com/dkxe8h4cs/image/upload/v1774287737/photo_6201569219787296188_w_otkvxh.jpg" },
-  { title: "Lumina Web", category: "Web Design", image: "https://res.cloudinary.com/dkxe8h4cs/image/upload/v1774288921/photo_6201569219787296192_w_f1fexi.jpg" },
-  { title: "Echo Systems", category: "Product Design", video: "https://res.cloudinary.com/dkxe8h4cs/video/upload/v1774290370/document_6201569219327302908_e34fot.mp4" },
-  { title: "Prism Studio", category: "Creative Direction", image: "https://res.cloudinary.com/dkxe8h4cs/image/upload/v1774289035/photo_6201569219787296193_y_ylkwjy.jpg" },
-  { title: "Orbit Labs", category: "Digital Strategy", image: "https://res.cloudinary.com/dkxe8h4cs/image/upload/v1774287631/photo_6201569219787296183_w_iigb1o.jpg" },
+  { title: "Aura AI", category: "Brand Identity", video: "https://res.cloudinary.com/dkxe8h4cs/video/upload/f_auto,q_auto/v1774290374/document_6201569219327302910_fqv2o4.mp4" },
+  { title: "Nexora Dashboard", category: "UI/UX Design", image: "https://res.cloudinary.com/dkxe8h4cs/image/upload/f_auto,q_auto/v1774290114/photo_6201569219787296196_y_goxilz.jpg" },
+  { title: "Quantum Flow", category: "Motion Graphics", video: "https://res.cloudinary.com/dkxe8h4cs/video/upload/f_auto,q_auto/v1774290370/document_6201569219327302909_ytxguq.mp4" },
+  { title: "Vortex App", category: "Mobile Development", image: "https://res.cloudinary.com/dkxe8h4cs/image/upload/f_auto,q_auto/v1774287737/photo_6201569219787296188_w_otkvxh.jpg" },
+  { title: "Lumina Web", category: "Web Design", image: "https://res.cloudinary.com/dkxe8h4cs/image/upload/f_auto,q_auto/v1774288921/photo_6201569219787296192_w_f1fexi.jpg" },
+  { title: "Echo Systems", category: "Product Design", video: "https://res.cloudinary.com/dkxe8h4cs/video/upload/f_auto,q_auto/v1774290370/document_6201569219327302908_e34fot.mp4" },
+  { title: "Prism Studio", category: "Creative Direction", image: "https://res.cloudinary.com/dkxe8h4cs/image/upload/f_auto,q_auto/v1774289035/photo_6201569219787296193_y_ylkwjy.jpg" },
+  { title: "Orbit Labs", category: "Digital Strategy", image: "https://res.cloudinary.com/dkxe8h4cs/image/upload/f_auto,q_auto/v1774287631/photo_6201569219787296183_w_iigb1o.jpg" },
 ];
 
 export const howItWorksSteps = [

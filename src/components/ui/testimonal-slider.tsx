@@ -30,14 +30,7 @@ export const TestimonialSlider = ({
     return () => clearInterval(interval);
   }, [active, autorotate, testimonials.length]);
 
-  const heightFix = () => {
-    if (testimonialsRef.current && testimonialsRef.current.parentElement)
-      testimonialsRef.current.parentElement.style.height = `${testimonialsRef.current.clientHeight}px`;
-  };
-
-  useEffect(() => {
-    heightFix();
-  }, []);
+  // Height is handled via CSS min-height to prevent forced layout reflows
 
   return (
     <div className="mx-auto w-full max-w-3xl text-center">
@@ -57,7 +50,7 @@ export const TestimonialSlider = ({
                 leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700"
                 leaveFrom="opacity-100 rotate-0"
                 leaveTo="opacity-0 rotate-[60deg]"
-                beforeEnter={() => heightFix()}
+                leaveTo="opacity-0 rotate-[60deg]"
               >
                 <img
                   className="relative left-1/2 top-11 -translate-x-1/2 rounded-full object-cover"
@@ -73,7 +66,7 @@ export const TestimonialSlider = ({
       </div>
       
       {/* Testimonial Quote Slider */}
-      <div className="mb-9 transition-all delay-300 duration-150 ease-in-out">
+      <div className="mb-9 transition-transform delay-300 duration-150 min-h-[96px]">
         <div className="relative flex flex-col" ref={testimonialsRef}>
           {testimonials.map((testimonial, index) => (
             <Transition
@@ -85,7 +78,6 @@ export const TestimonialSlider = ({
               leave="transition ease-out duration-300 delay-300 absolute"
               leaveFrom="opacity-100 translate-x-0"
               leaveTo="opacity-0 translate-x-4"
-              beforeEnter={() => heightFix()}
             >
               <div className="text-lg sm:text-xl md:text-2xl font-bold text-white px-2 before:content-['\201C'] after:content-['\201D'] tracking-tight">
                 {testimonial.quote}
@@ -100,9 +92,9 @@ export const TestimonialSlider = ({
         {testimonials.map((testimonial, index) => (
           <button
             key={index}
-            className={`m-1 sm:m-1.5 inline-flex justify-center whitespace-nowrap rounded-full px-3 py-1.5 sm:px-4 sm:py-2 text-[10px] sm:text-xs font-medium shadow-sm transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/50 border border-white/10 ${
+            className={`m-1 sm:m-1.5 inline-flex justify-center whitespace-nowrap rounded-full px-3 py-1.5 sm:px-4 sm:py-2 text-[10px] sm:text-xs font-medium transition-transform duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/50 border border-white/10 ${
               active === index
-                ? "bg-white text-black shadow-white/10 scale-105"
+                ? "bg-white text-black scale-105"
                 : "bg-white/5 text-white/70 hover:bg-white/10 hover:text-white"
             }`}
             onClick={() => {
