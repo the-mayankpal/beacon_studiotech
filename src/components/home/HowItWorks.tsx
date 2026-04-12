@@ -41,7 +41,7 @@ const HowItWorksSection = () => {
               OUR PROCESS
             </span>
             <h2 className="text-5xl lg:text-7xl font-bold text-white leading-tight font-serif">
-              From First Message to <span className="text-neutral-500">Final Build.</span>
+              From First Message to <span className="text-neutral-400">Final Build.</span>
             </h2>
             <p className="mt-8 text-neutral-400 text-lg max-w-sm">
               Most agencies make web development and AI automation complicated on purpose. We keep it simple, fast, and built around your business.
@@ -72,7 +72,7 @@ const HowItWorksSection = () => {
                     <span 
                       className={cn(
                         "text-xs tracking-widest uppercase font-semibold",
-                        isBlack ? "text-neutral-400" : "text-neutral-500"
+                        isBlack ? "text-neutral-400" : "text-neutral-600"
                       )}
                     >
                       {item.phase}

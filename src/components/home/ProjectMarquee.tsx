@@ -46,7 +46,9 @@ const ProjectMarquee = () => {
                       muted 
                       playsInline
                       className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 ease-out"
-                    />
+                    >
+                      <track kind="captions" srcLang="en" label="English" />
+                    </video>
                   ) : (
                     <img 
                       src={project.image} 
@@ -84,7 +86,9 @@ const ProjectMarquee = () => {
                       muted 
                       playsInline
                       className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 ease-out"
-                    />
+                    >
+                      <track kind="captions" srcLang="en" label="English" />
+                    </video>
                   ) : (
                     <img 
                       src={project.image} 

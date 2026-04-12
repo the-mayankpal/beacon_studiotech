@@ -19,6 +19,9 @@ const HeroContent = () => (
         alt="Hero background" 
         className="w-full h-full object-cover block md:hidden"
         referrerPolicy="no-referrer"
+        fetchPriority="high"
+        decoding="async"
+        loading="eager"
       />
       {/* Desktop hero image */}
       <img 
@@ -26,6 +29,9 @@ const HeroContent = () => (
         alt="Hero background" 
         className="w-full h-full object-cover hidden md:block"
         referrerPolicy="no-referrer"
+        fetchPriority="high"
+        decoding="async"
+        loading="eager"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent"></div>
@@ -130,9 +136,7 @@ const HeroContent = () => (
               Let's chat <ChevronRight size={20} />
             </a>
             <div className="flex-shrink-0">
-              <a href="#projects">
-                <FlowButton text="See projects" />
-              </a>
+              <FlowButton text="See projects" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })} />
             </div>
           </motion.div>
         </motion.div>
