@@ -88,11 +88,8 @@ const HeroContent = () => (
       </main>
 
       {/* Trusted Brands */}
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 1 }}
-        className="pb-4 md:pb-8 flex flex-col items-center justify-center w-full"
+      <div 
+        className="pb-4 md:pb-8 flex flex-col items-center justify-center w-full hero-animate-fade hero-delay-800"
       >
         <p className="text-sm font-medium text-gray-400 mb-6 md:mb-8">Powered by Leading AI Technologies</p>
         <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16 opacity-70 text-white">
@@ -122,7 +119,7 @@ const HeroContent = () => (
             <span className="font-bold text-xl tracking-tight">OpenAI</span>
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   </div>
 );

@@ -44,7 +44,7 @@ const Ring = ({ cx, cy, rx, ry, delay }: { cx: number; cy: number; rx: number; r
 );
 
 export default function AIAgentAnimation() {
-  const centerImg = "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800";
+  const centerImg = "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=60&w=400";
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {

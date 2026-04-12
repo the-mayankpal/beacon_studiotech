@@ -45,6 +45,7 @@ const ProjectMarquee = () => {
                       loop 
                       muted 
                       playsInline
+                      preload="none"
                       className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 ease-out"
                     >
                       <track kind="captions" srcLang="en" label="English" />
@@ -53,6 +54,7 @@ const ProjectMarquee = () => {
                     <img 
                       src={project.image} 
                       alt={project.title} 
+                      loading="lazy"
                       className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 ease-out"
                       referrerPolicy="no-referrer"
                     />
@@ -85,6 +87,7 @@ const ProjectMarquee = () => {
                       loop 
                       muted 
                       playsInline
+                      preload="none"
                       className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 ease-out"
                     >
                       <track kind="captions" srcLang="en" label="English" />
@@ -93,6 +96,7 @@ const ProjectMarquee = () => {
                     <img 
                       src={project.image} 
                       alt={project.title} 
+                      loading="lazy"
                       className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 ease-out"
                       referrerPolicy="no-referrer"
                     />
